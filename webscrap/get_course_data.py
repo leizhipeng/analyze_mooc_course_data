@@ -12,8 +12,16 @@ import time
 import codecs
 import os
 
-class GetProductdata:
+class get_course_data:
+    """
+    A class to get course data from course webpage.
+    """
     def __init__(self,inputfile0,output_directory0):
+        """
+        Initialize class with input file and output directory.
+        :param inputfile0: input file.
+        :param output_directory0: output directory.
+        """
         with open(inputfile0) as file:
             content = file.readlines()
         self.links = [item.split('\t')[2] for item in content[1:]]
@@ -23,8 +31,11 @@ class GetProductdata:
         # self.driver=webdriver.Chrome()
         self.driver = webdriver.Firefox()
 
-
     def get_data(self,k):
+        """
+        Get data of the k-th course.
+        :param k: course number.
+        """
         product_link=self.links[k]
         self.driver.get(product_link)
         time.sleep(30)
@@ -33,15 +44,11 @@ class GetProductdata:
         course_file_name1 = self.output_directory+str(k+1)+"_instructor.txt"
         course_file_name2 = self.output_directory+str(k+1)+"_review.txt"
 
-        # element = WebDriverWait(self.driver, 3600).until(
-        #     EC.presence_of_element_located((By.CLASS_NAME, "clp-lead__title"))
-        # )
 
         try:
             title= self.driver.find_element_by_class_name("clp-lead__title").text
             title= re.sub('[^A-Za-z0-9_]', ' ', title)
         except:
-            # title = "NULL"
             return
         try:
             headline = self.driver.find_element_by_class_name("clp-lead__headline").text
@@ -55,8 +62,7 @@ class GetProductdata:
             enrollment =re.sub("[^0-9]", '', enrollment)
         except:
             enrollment = "NULL"
-        
-        
+
         try:
             ratings_a = self.driver.find_element_by_xpath("//div[@class='styles--rating-wrapper--5a0Tr']").text
             rating = ratings_a.split('\n')[1]
@@ -182,23 +188,22 @@ class GetProductdata:
         f1.close()
         f2.close()
 
-
     def run(self):
+        """
+        Run the web scrapping.
+        """
         for k in range(495,len(self.links)):
             self.get_data(k)
         self.driver.quit()
-        
-
 
 if __name__ == "__main__":
     # Specify the ranking file.
-    file = "course_list_final.tsv"
+    file = "course_list.tsv"
     # Specify the output file.
-    output_directory = 'data/'
-
+    output_directory = '../data/'
 
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
 
-    course = GetProductdata(file, output_directory)
+    course = get_course_data(file, output_directory)
     course.run()

@@ -2,14 +2,12 @@ from selenium import webdriver
 import re
 import time
 
-
 def get_rank(webpage, outputfile):
     """
     Purpose: obtain COURSE list from the input web page.
     :param webpage: the webpage that has products.
     :param outputfile: output file that has the product information.
     """
-
     count = 1
     page = 1
     f = open(outputfile, 'wt')
@@ -31,8 +29,6 @@ def get_rank(webpage, outputfile):
         # parse the elements in the webpage.
         xpath_product = "//div[@class='popper--popper--19faV popper--popper-hover--4YJ5J']"
         product = driver.find_elements_by_xpath(xpath_product)
-
-        # write information for each product.:s
 
         for i in range(len(product)):
             try:

@@ -200,7 +200,7 @@ if __name__ == "__main__":
     # Specify the ranking file.
     file = "course_list.tsv"
     # Specify the output file.
-    output_directory = '../data/'
+    output_directory = '../data/raw/'
 
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)

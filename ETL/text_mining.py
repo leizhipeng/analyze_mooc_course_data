@@ -1,7 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import pyLDAvis.gensim
-import re
 import nltk
 from nltk.stem.porter import *
 from stop_words import get_stop_words
@@ -9,10 +7,6 @@ from nltk.tokenize import word_tokenize
 from wordcloud import WordCloud
 import gensim
 from gensim import corpora, models
-import pickle
-from sklearn.feature_extraction.text import CountVectorizer
-# from lda import guidedlda as glda
-import numpy as np
 import codecs
 
 
@@ -135,6 +129,7 @@ def dominant_topic(ldamodel, corp, texts, saved_file_name):
                                        ignore_index=True)
         else:
             topic_df = topic_df.append(pd.Series([10000, round(0.0, 4), ""]), ignore_index=True)
+    topic_df.index = texts.index
     topic_df = pd.concat([topic_df, texts], axis=1)
     topic_df.columns = ['Dominant_Topic', 'Topic_Perc_Contrib', 'Keywords', 'Abstract']
     topic_df.to_csv(saved_file_name)

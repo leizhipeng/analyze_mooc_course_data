@@ -16,6 +16,11 @@
 Websites for a massive open online course (MOOC), such as Udacity, Udemy, and Coursera, provide learners a low-cost, highly efficient way to acquire knowledge. Business analytics, which relies mainly on computer coding, is a popular topic in MOOC websites. 
 
 In this project, we aim to discover the secrete of designing an excellent online course for business analytics. 
+* What are the features of the Business Analytics online course?
+* How is the course content introduced?
+* How is the instructor introduced?
+* What are the factors impacting the enrollments of the Business Analytics online course?
+
 
 <a name="filestructure"></a>
 ## File Structure:

@@ -7,6 +7,7 @@
 4. [Pipeline](#pipeline)
 5. [Exploring Variables](#variables)
 6. [Regression](#regression)
+7. [Conclusion](#conclusion)
 
 ![intro figure](https://github.com/leizhipeng/analyze_mooc_course_data/blob/main/figures/udemy.png?raw=true)
 
@@ -62,4 +63,8 @@ Use ordinary least squares (OLS) model to check the impacts of independent varia
 
 ![regression figure](https://github.com/leizhipeng/analyze_mooc_course_data/blob/main/figures/OLS.png?raw=true)
 
-
+<a name="conclusion"></a>
+## Conclusion
+* To design an excellent online course for business analytics, we can increase the original price, lecture numbers, and downloadable resources to promote the enrollment of the course.
+* The course description should emphasize the project reporting and visualization technologies such as SQL, Excel, and power bi. 
+* The instructor introduction should emphasize the instructor's teaching experience, especially teaching business analytics in a university for an extended period.

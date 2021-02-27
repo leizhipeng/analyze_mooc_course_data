@@ -14259,11 +14259,11 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="ETL-for-Udemy-Course-Dataset">ETL for Udemy Course Dataset<a class="anchor-link" href="#ETL-for-Udemy-Course-Dataset">&#182;</a></h1><hr>
+<h1 id="ETL-for-Non-Text-data-of-Udemy-Course-Dataset">ETL for Non-Text data of Udemy Course Dataset<a class="anchor-link" href="#ETL-for-Non-Text-data-of-Udemy-Course-Dataset">&#182;</a></h1><hr>
 <ul>
 <li>The raw Udemy course dataset includes (1) a course list of business analytics web crapped from Udemy's business analytics webpages, and (2) detailed information of each course web crapped from course webpage.</li>
-<li>This notebook aims to perform the extract, transform, and load (ETL) procedure on the raw dataset.</li>
-<li>The non-text variable is transformed.</li>
+<li>The course information includes non-text data, such as enrollment numbers and ratings, and text data of course description and instruction introduction.  </li>
+<li>This notebook aims to perform the extract, transform, and load (ETL) procedure on the non-text data of the raw dataset. The text data is processed in a seperate notebook. </li>
 </ul>
 <hr>
 
@@ -14288,7 +14288,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Process-the-Data-of-Course-List.">Process the Data of Course List.<a class="anchor-link" href="#Process-the-Data-of-Course-List.">&#182;</a></h3>
+<h2 id="1.-Process-the-Dataset-of-Course-List.">1. Process the Dataset of Course List.<a class="anchor-link" href="#1.-Process-the-Dataset-of-Course-List.">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14335,10 +14335,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Handle Missing data</li>
-</ul>
-
+<h3 id="Handle-Missing-data">Handle Missing data<a class="anchor-link" href="#Handle-Missing-data">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14404,7 +14401,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Process-the-Data-Scrapped-from-Course-Webpage">Process the Data Scrapped from Course Webpage<a class="anchor-link" href="#Process-the-Data-Scrapped-from-Course-Webpage">&#182;</a></h3>
+<h2 id="2.-Process-the-Dataset-Scrapped-from-Course-Webpage">2. Process the Dataset Scrapped from Course Webpage<a class="anchor-link" href="#2.-Process-the-Dataset-Scrapped-from-Course-Webpage">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14432,10 +14429,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Parse variables</li>
-</ul>
-
+<h3 id="Parse-variables">Parse variables<a class="anchor-link" href="#Parse-variables">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14519,10 +14513,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Parse intructor information.</li>
-</ul>
-
+<h3 id="Parse-intructor-information.">Parse intructor information.<a class="anchor-link" href="#Parse-intructor-information.">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14791,7 +14782,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Save-the-Clean-Dataset">Save the Clean Dataset<a class="anchor-link" href="#Save-the-Clean-Dataset">&#182;</a></h3>
+<h2 id="3.-Save-the-Clean-Dataset">3. Save the Clean Dataset<a class="anchor-link" href="#3.-Save-the-Clean-Dataset">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">

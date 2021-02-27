@@ -14259,9 +14259,12 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="ETL-for-Text-Variables">ETL for Text Variables<a class="anchor-link" href="#ETL-for-Text-Variables">&#182;</a></h2><hr>
+<h2 id="ETL-for-Text-Data">ETL for Text Data<a class="anchor-link" href="#ETL-for-Text-Data">&#182;</a></h2><hr>
 <ul>
-<li>The course description and the instructor introduction are processed using LDA topic modeling.</li>
+<li>The course description and the instructor introduction are the text data we collect for each courses. </li>
+<li>This notebook aims to transfer the text data into numerical data so that I can perform regression analysis. </li>
+<li>Latent Dirichlet Allocation (LDA) is a topic model and is used to classify text in a document to a particular topic.</li>
+<li>With LDA, we can find the topic distribution, which is a numerical data. </li>
 </ul>
 <hr>
 
@@ -14328,7 +14331,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="LDA-for-course-description">LDA for course description<a class="anchor-link" href="#LDA-for-course-description">&#182;</a></h2>
+<h2 id="1.-LDA-for-course-description">1. LDA for course description<a class="anchor-link" href="#1.-LDA-for-course-description">&#182;</a></h2><h3 id="Create-the-LDA-model">Create the LDA model<a class="anchor-link" href="#Create-the-LDA-model">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14378,6 +14381,11 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Plot-word-cloud-of-all-texts">Plot word cloud of all texts<a class="anchor-link" href="#Plot-word-cloud-of-all-texts">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14430,6 +14438,11 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Find-Dominant-Topic-for-Each-Course-Description">Find Dominant Topic for Each Course Description<a class="anchor-link" href="#Find-Dominant-Topic-for-Each-Course-Description">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14515,6 +14528,11 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Visualize-LDA-Topics">Visualize LDA Topics<a class="anchor-link" href="#Visualize-LDA-Topics">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15095,6 +15113,11 @@ Introduction to Power BI Installation process of Desktop Power BI Power BI Deskt
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Document-counts-in-each-topic">Document counts in each topic<a class="anchor-link" href="#Document-counts-in-each-topic">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15142,6 +15165,11 @@ Name: Dominant_Topic, dtype: int64
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Add-the-Topic-Distribution-Matrix-into-the-Dataset">Add the Topic Distribution Matrix into the Dataset<a class="anchor-link" href="#Add-the-Topic-Distribution-Matrix-into-the-Dataset">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15165,7 +15193,7 @@ Name: Dominant_Topic, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="LDA-for-Instructor-Information">LDA for Instructor Information<a class="anchor-link" href="#LDA-for-Instructor-Information">&#182;</a></h2>
+<h2 id="2.-LDA-for-Instructor-Information">2. LDA for Instructor Information<a class="anchor-link" href="#2.-LDA-for-Instructor-Information">&#182;</a></h2><h3 id="Create-the-LDA-model">Create the LDA model<a class="anchor-link" href="#Create-the-LDA-model">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15215,6 +15243,11 @@ Name: Dominant_Topic, dtype: int64
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Plot-Wordcloud-of-the-Instructor-Introduction">Plot Wordcloud of the Instructor Introduction<a class="anchor-link" href="#Plot-Wordcloud-of-the-Instructor-Introduction">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15267,6 +15300,11 @@ Name: Dominant_Topic, dtype: int64
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Find-Topic-Distribution-of-Instructor-Introduction">Find Topic Distribution of Instructor Introduction<a class="anchor-link" href="#Find-Topic-Distribution-of-Instructor-Introduction">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15352,6 +15390,11 @@ Name: Dominant_Topic, dtype: int64
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Visualize-LDA-Topics">Visualize LDA Topics<a class="anchor-link" href="#Visualize-LDA-Topics">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15932,6 +15975,11 @@ Dr. Mohamed Elsherif is a physician with specialization in public health, epidem
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Document-counts-in-each-topic">Document counts in each topic<a class="anchor-link" href="#Document-counts-in-each-topic">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15979,6 +16027,11 @@ Name: Dominant_Topic, dtype: int64
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Obtain-Matrix-of-Topic-Distribution">Obtain Matrix of Topic Distribution<a class="anchor-link" href="#Obtain-Matrix-of-Topic-Distribution">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15999,6 +16052,11 @@ Name: Dominant_Topic, dtype: int64
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Add-Topic-Distribution-into-Dataset">Add Topic Distribution into Dataset<a class="anchor-link" href="#Add-Topic-Distribution-into-Dataset">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16014,6 +16072,11 @@ Name: Dominant_Topic, dtype: int64
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="3.-Save-the-Dataset">3. Save the Dataset<a class="anchor-link" href="#3.-Save-the-Dataset">&#182;</a></h2>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">

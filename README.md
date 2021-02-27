@@ -21,6 +21,8 @@ In this project, we aim to discover the secrete of designing an excellent online
 * How is the instructor introduced?
 * What are the factors impacting the enrollments of the Business Analytics online course?
 
+A blog for this project can be found at [link](https://leizhipeng.medium.com/how-do-we-design-a-good-online-course-for-business-analytics-f4cc5e0dc3cf)
+
 
 <a name="filestructure"></a>
 ## File Structure:
